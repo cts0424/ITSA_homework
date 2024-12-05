@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int calculate_fee(int time_chunks) {
+    int fee = 0;
+    if (time_chunks > 8) {
+        fee += (time_chunks - 8) * 60;
+        time_chunks = 8;
+    }
+    if (time_chunks > 4) {
+        fee += (time_chunks - 4) * 40;
+        time_chunks = 4;
+    }
+    fee += time_chunks * 30;
+    return fee;
+}
+
+int main() {
+    int in_hour, in_min, out_hour, out_min;
+    scanf("%d %d %d %d", &in_hour, &in_min, &out_hour, &out_min);
+
+    if (in_hour < 0 || in_hour > 23 || out_hour < 0 || out_hour > 23 ||
+        in_min < 0 || in_min > 59 || out_min < 0 || out_min > 59) {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    if (out_hour < in_hour || (out_hour == in_hour && out_min < in_min)) {
+        out_hour += 24; 
+    }
+    int total_minutes = (out_hour * 60 + out_min) - (in_hour * 60 + in_min);
+
+    int time_chunks = (total_minutes ) / 30;
+    int total_fee = calculate_fee(time_chunks);
+
+    printf("%d\n", total_fee);
+    return 0;
+}
