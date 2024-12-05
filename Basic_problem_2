@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    double temp,km;
+
+    scanf("%d",&num);
+    
+    temp = num;
+    km = temp * 1.6;
+
+    printf("%.1lf\n",km);
+
+	return 0;
+}
