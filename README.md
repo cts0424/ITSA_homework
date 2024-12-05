@@ -1,2 +1,2 @@
 # ITSA_homework
-add points for data structure
+Add points for data structure
