@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int t,b,h;
+
+    scanf("%d %d %d",&t,&b,&h);
+
+    double temp = (t + b) * h;
+    double area = temp/2;
+
+    printf("Trapezoid area:%.1lf\n",area);
+
+	return 0;
+}
