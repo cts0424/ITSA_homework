@@ -1,0 +1,16 @@
+ #include <stdio.h>
+
+int main() {
+    int seconds,temp;
+    scanf("%d",&seconds);
+    int days = seconds / 86400;
+    seconds %= 86400;
+    int hours = seconds / 3600;
+    seconds %= 3600;
+    int mins = seconds / 60;
+    seconds %= 60;
+
+    printf("%d days\n%d hours\n%d minutes\n%d seconds\n",days,hours,mins,seconds);
+
+    return 0;
+}
