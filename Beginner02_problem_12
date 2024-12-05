@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(){
+    int n,a,b,c;
+
+    scanf("%d",&n);
+
+    int temp = n;
+
+    if(n / 10 > 0){
+        a = n / 10;
+        n %= 10;
+    }else{
+        a = 0;
+    }
+    if(n / 5 > 0){
+        b = n / 5;
+        n %= 5;
+    }else{
+        b = 0;
+    }
+    if(n / 1 > 0){
+        c = n / 1;
+        n %= 1;
+    }else{
+        c = 0;
+    }
+    printf("NT10=%d\n",a);
+    printf("NT5=%d\n",b);
+    printf("NT1=%d\n",c);
+
+    return 0;
+}         
