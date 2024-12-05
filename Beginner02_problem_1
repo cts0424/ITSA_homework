@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int height,base;
+    scanf("%d %d",&base,&height);
+
+    double temp = base*height;
+
+    double area = temp/2;
+
+    printf("Triangle area:%.1lf\n",area);
+
+	return 0;
+}
