@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int w, h;            // 體重和身高
+    double BMI, height_m; // BMI 和身高（以公尺為單位）
+
+    scanf("%d %d", &w, &h); // 輸入體重（公斤）和身高（公分）
+    
+    height_m = h / 100.0;   // 將身高轉換為公尺
+    BMI = w / (height_m * height_m); // 計算 BMI
+
+    printf("%.2lf\n", BMI); // 保留兩位小數輸出 BMI
+
+    return 0;
+}
