@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    int x,y,z;
+    int large = 0;
+
+    scanf("%d %d %d",&x,&y,&z);
+    if(x > large){
+        large = x;
+    }
+    if(y > large){
+        large = y;
+    }
+    if(z > large){
+        large = z;
+    }
+    printf("%d\n",large);
+
+    return 0;
+}
