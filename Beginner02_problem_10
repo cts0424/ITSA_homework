@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int x;
+    double km;
+
+    scanf("%d",&x);
+    km = x*1.6;
+
+    printf("km=%.1lf\n",km);
+
+    return 0;
+}
