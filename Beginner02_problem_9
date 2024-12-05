@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int count(int x){
+    int temp = 1;
+    for(int i = 0 ; i < x ; i++){
+        temp *=2 ;
+    }
+    return temp;
+}
+
+int main(){
+    int n,x,ans;
+    scanf("%d",&n);
+
+    for(int i = 0 ; i < n ; i++){
+        scanf(" %d",&x);
+        ans = count(x);
+        if(x < 31){    
+            printf("%d\n",ans);
+        }else{
+            printf("Value of more than 31\n");
+        }
+    }
+
+    return 0;
+}
