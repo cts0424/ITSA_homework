@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int m;
+    scanf("%d",&m);
+
+    int temp = m / 0.238 + 1;
+    printf("%d\n",temp);
+
+    return 0;
+}
