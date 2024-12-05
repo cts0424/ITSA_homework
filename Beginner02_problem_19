@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n,m;
+    scanf("%d %d",&n,&m);
+    
+    int total = 1;
+    int i = 2;
+
+    while(i < n || i < m){
+        if(n % i == 0 && m % i == 0){
+            n /= i;
+            m /= i;
+            total *= i;
+        }else{
+            i++;
+        }
+    }
+    printf("%d\n",total);
+
+    return 0;
+}
