@@ -3,29 +3,24 @@
 int main() {
     int x;
     int bin[8] = {0, 0, 0, 0, 0, 0, 0, 0};
-    int pin = 0; // 標記是否為負數
+    int pin = 0;
 
     scanf("%d", &x);
 
-    // 處理負數
     if (x < 0) {
-        pin = 1; // 標記為負數
-        x *= -1; // 將負數轉為正數
+        pin = 1; 
+        x *= -1;
     }
 
-    // 將數字轉換為二進制
     for (int i = 7; x > 0 && i >= 0; i--) {
         bin[i] = x % 2;
         x /= 2;
     }
 
-    // 若為負數，取反並加 1
     if (pin == 1) {
-        // 取反
         for (int i = 0; i < 8; i++) {
             bin[i] = 1 - bin[i];
         }
-        // 加 1
         for (int i = 7; i >= 0; i--) {
             if (bin[i] == 0) {
                 bin[i] = 1;
